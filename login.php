@@ -35,37 +35,64 @@ if (isset($_POST['login'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Inasis Reporting System</title>
-	<link   href="css/bootstrap.min.css" rel="stylesheet">
-	<body background="images/b.png">
-	
+	  <title>Inasis Reporting System</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	  <body background="images/download.jpg">
+	  
 </head>
 <body>
-	<div class="header">
-		<br>
-	    <center> <h1>UUM buggy booking System (Admin)</h1> </center>
-		<br>
-		<br>
-		<center> <h3>Login</h3> </center>
-		<br>
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Buggy Booking In UUM</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="../Buggy/index.html">Home</a></li>
+      <li><a href="../Buggy/view.php">Check Buggy Availability</a></li>
+      <li><a href="../Buggy/complain.php">Book Now</a></li>
+	  <li><a href="../Buggy/feedback.php">Contact</a></li>
+	  <li class="active"><a href="../Buggy/login.php">Admin</a></li>
+    </ul>
+  </div>
+</nav>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="header">
+				<br>
+				<h1 class="text-center">&nbsp;</h1>
+			</div>
+		</div>
 
 	</div>
-	<form method="post" action="login.php">
-	<center>
-		
-		<div class="input-group">
-			<label>Username</label>
-			<input type="text" name="username" >
+	<br>
+	<div class="row">
+		<div class="col-md-4">
 		</div>
-		<div class="input-group">
-			<label>Password</label>
-			<input type="password" name="password">
+		<div class="col-md-4">
+				<form method="post" action="login.php">
+					<div class="panel panel-default">
+					  <div class="panel-heading">Login</div>
+					  <div class="panel-body">
+						<div class="input-group">
+								<label>Username</label>
+								<input type="text" name="username" class="form-control" >
+						</div>
+						<div class="input-group">
+								<label>Password</label>
+								<input type="password" name="password" class="form-control">
+						</div>
+						<div class="input-group">
+								<br>
+								<button type="submit" class="btn btn-success" name="login">Login</button>
+						</div>
+					</div>
+				  </div>			
+			</form>	
 		</div>
-		<div class="input-group">
-			<button type="submit" class="btn btn-success" name="login">Login</button>
+		<div class="col-md-4">
 		</div>
-		
-		</center>
-	</form>
+	</div>
 </body>
 </html>

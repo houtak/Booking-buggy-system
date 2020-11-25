@@ -62,45 +62,42 @@ echo "<script>alert('Successfully Added!!!'); window.location='updatebuggy.php'<
     <meta charset="utf-8">
    <link   href="css/bootstrap.min.css" rel="stylesheet">
 	<body background="images/b.png">
-	<style>
-	.form { 
-	margin: 0 auto; 
-	width:250px;
-	line-height: 200%:
-	}
-	</style>
 </head>
  
 <body>
-			<div class="form">
-                <h3>Buggy Booking Form</h3>
-            </div>
-    <form method="post" action="updatebuggy.php"  enctype="multipart/form-data" class="form">
-<table class="table1">	
-	
-	<tr>
-		<td><label style="color:#3a87ad; font-size:18px;">Date</label></td>
-		<td width="30"></td>
-		<?php date_default_timezone_set("Asia/Kuala_Lumpur");?>
-		<td><input type="date" name="date" min="<?php echo date("Y-m-d")?>"/></td>
-	</tr>
-	
-	
-	
-	<tr>
-		<td><label style="color:#3a87ad; font-size:18px;">Edit for Availability of Buggy</label></td>
-		<td width="30"></td>
-		<td><input type="number" name="buggy" /></td>
-	</tr>
-	
-	
-	
-</table>
-    </div>
-    <div>
-	<a class="btn" href="staffmain.php" class="btn btn-primary">Back</a>
-		<button type="submit" name="Submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
-  </body>
+<br>
+<br>
+	 <div class="row">
+		<div class="col-md-2">
+		</div>
+		
+		<div class="col-md-7">
+			<form method="post" action="updatebuggy.php"  enctype="multipart/form-data">
+			<div class="panel panel-default">
+			   <div class="panel-heading">Update Buggy Availability</div>
+				  <div class="panel-body">
+					<div class = "row">
+					  <div class="col-md-4">	
+						<div class="input-group">
+							<label style="color:#3a87ad; font-size:18px;">Date</label>
+							<?php date_default_timezone_set("Asia/Kuala_Lumpur");?>
+							<input type="date" name="date" min="<?php echo date("Y-m-d")?>" class="form-control"/>
+						</div>
+						<br>
+						<div class="input-group">
+							<a class="btn" href="staffmain.php" class="btn btn-primary">Back</a>
+							<button type="submit" name="Submit" class="btn btn-primary">Submit</button>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="input-group">
+							<label style="color:#3a87ad; font-size:18px;">Update Buggy</label>
+							<input type="number" name="buggy" class="form-control"/>
+						</div>
+					</div>
+				   </div>
+				</div>
+			</div>	
+		</form>
+</body>
 </html>

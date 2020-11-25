@@ -63,7 +63,7 @@ $phone=$_POST['phone'];
 <head>
     <meta charset="utf-8">
    <link   href="css/bootstrap.min.css" rel="stylesheet">
-	<body background="images/b.png">
+	<body background="images/download1.jpg">
 	<style>
 	.form { 
 	margin: 0 auto; 
@@ -74,50 +74,67 @@ $phone=$_POST['phone'];
 </head>
  
 <body>
-			<div class="form">
-                <h3>Feedback</h3>
-            </div>
-    <form method="post" action="feedback.php"  enctype="multipart/form-data" class="form">
-<table class="table1">
-	<tr>
-		<td><label style="color:#3a87ad; font-size:18px;">Subject</label></td>
-		<td width="30"></td>
-		<td><input type="text" name="subject" placeholder="Subject"  required /></td>
-	</tr>
-	<tr>
-		<td><label style="color:#3a87ad; font-size:18px;">Message</label></td>
-		<td width="30"></td>
-		<td><textarea type="text" name="message" placeholder="Comment" rows="8" cols="50" required></textarea></td>
-	</tr>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="#">Buggy Booking In UUM</a>
+		</div>
+		<ul class="nav navbar-nav">
+		  <li><a href="../Buggy/index.html">Home</a></li>
+		  <li><a href="../Buggy/view.php">Check Buggy Availability</a></li>
+		  <li><a href="../Buggy/complain.php">Book Now</a></li>
+		  <li class="active"><a href="../Buggy/feedback.php">Contact</a></li>
+		  <li><a href="../Buggy/login.php">Admin</a></li>
+		</ul>
+	  </div>
+	</nav>
 	
+	<br>
+	<br>
+	 <div class="row">
+		<div class="col-md-2">
+		</div>
+		
+		<div class="col-md-7">
 	
-	<tr>
-		<td><label style="color:#3a87ad; font-size:18px;">Name</label></td>
-		<td width="30"></td>
-		<td><input type="text" name="name" placeholder="Name"  required /></td>
-	</tr>
-	
-	<tr>
-		<td><label style="color:#3a87ad; font-size:18px;">Email</label></td>
-		<td width="30"></td>
-		<td><input type="email" name="email" placeholder="email" required /></td>
-	</tr>
-	
-	
-	<tr>
-		<td><label style="color:#3a87ad; font-size:18px;">Phone</label></td>
-		<td width="30"></td>
-		<td><input type="text" name="phone" placeholder="Phone" required  /></td>
-	</tr>
-	
-	
-	
-</table>
-    </div>
-    <div>
-	<a class="btn" href="index.html" class="btn btn-primary">Back</a>
-		<button type="submit" name="Submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
+    <form method="post" action="feedback.php"  enctype="multipart/form-data">
+		<div class="panel panel-default">
+						<div class="panel-heading">Feedback</div>
+						<div class="panel-body">
+						   <div class = "row">
+								<div class="col-md-6">
+								<div class="input-group">
+									<label style="color:#3a87ad; font-size:18px;">Subject</label>
+									<input type="text" name="subject" placeholder="Subject" class="form-control" size="100%" required />
+								</div>
+								<div class="input-group">
+									<label style="color:#3a87ad; font-size:18px;">Message</label>
+									<textarea type="text" name="message" placeholder="Comment" rows="8" cols="50" class="form-control" required></textarea>	
+								</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-group">
+										<label style="color:#3a87ad; font-size:18px;">Name</label>
+										<input type="text" name="name" placeholder="Name" class="form-control" size="100%" required />	
+									</div>
+									<div class="input-group">
+										<label style="color:#3a87ad; font-size:18px;">Email</label>
+										<input type="email" name="email" placeholder="email" class="form-control" size="100%" required />	
+									</div>
+									<div class="input-group">
+										<label style="color:#3a87ad; font-size:18px;">Phone</label>
+										<input type="text" name="phone" placeholder="Phone" class="form-control" size="100%" required  />	
+									</div>
+									<div class="input-group">
+										<br>
+										<a class="btn" href="index.html" class="btn btn-primary">Back</a>
+										<button type="submit" name="Submit" class="btn btn-primary">Submit</button>	
+									</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>												
+	</form>
   </body>
 </html>
